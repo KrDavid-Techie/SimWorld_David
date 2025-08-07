@@ -12,6 +12,10 @@ You have the following actions:
 You are given a plan in natural language:
 {plan}
 
+Plan format example : "Go to (1700, -1700) and pick up GEN_BP_Box_1_C."
+"Go to (x, y)" or "Move to (x, y)" means you should navigate to the position (x, y) in the city.
+(x, y) is position of destination. You must define {{"destination": [x,y]}} in Output when you navigate.
+"pick up [Object name]" means you should move to the position and pick up the [Object name].
 You should parse the plan into a list of actions. Output your decision in JSON format with only the following keys: action_queue, destination, object_name, reasoning.
 
 Example outputs:
